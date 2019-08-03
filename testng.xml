@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Lesson_10">
+        <classes>
+            <class name="com.mycompany.app.TestPage">
+                <methods>
+                    <!--                    Run all tests from TestPage class (first class)-->
+                    <include name="testBody"/>
+                    <include name="test3_TestPage"/>
+                    <include name="test4_TestPage"/>
+                </methods>
+            </class>
+            <class name="com.mycompany.app.NewClassForTest">
+                <methods>
+                    <!--                   Run only two tests from NewClassForTest class (second class)-->
+                    <include name="newClassForTestTest1"/>
+                    <exclude name="newClassForTestTest2"/>
+                    <include name="newClassForTestTest3"/>
+                    <exclude name="newClassForTestTest4"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
